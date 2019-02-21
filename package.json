@@ -7,29 +7,46 @@
     "Your Name <your@domain.io>"
   ],
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build:docs": "../../node_modules/.bin/jsdoc -c jsdoc.json",
-    "test": "ARK_ENV=test jest --runInBand --detectOpenHandles",
-    "test:coverage": "ARK_ENV=test jest --coverage --runInBand --detectOpenHandles",
-    "test:debug": "ARK_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
-    "test:watch": "ARK_ENV=test jest --runInBand --watch",
-    "test:watch:all": "ARK_ENV=test jest --runInBand --watchAll",
-    "lint": "eslint ./ --fix",
-    "depcheck": "depcheck ./"
+    "prepublishOnly": "yarn test && yarn build",
+    "pretest": "yarn lint && yarn build",
+    "compile": "../../node_modules/typescript/bin/tsc",
+    "build": "yarn clean && yarn compile",
+    "build:watch": "yarn clean && yarn compile -w",
+    "clean": "del dist",
+    "docs": "../../node_modules/typedoc/bin/typedoc src --out docs",
+    "lint": "../../node_modules/tslint/bin/tslint -c ./tslint.json 'src/**/*.ts' '__tests__/**/*.ts' --fix",
+    "test": "cross-env CORE_ENV=test jest --runInBand --forceExit",
+    "test:coverage": "cross-env CORE_ENV=test jest --coverage --coveragePathIgnorePatterns='/(defaults.ts|index.ts)$' --runInBand --forceExit",
+    "test:debug": "cross-env CORE_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand",
+    "test:watch": "cross-env CORE_ENV=test jest --runInBand --watch",
+    "test:watch:all": "cross-env CORE_ENV=test jest --runInBand --watchAll",
+    "updates": "../../node_modules/npm-check-updates/bin/npm-check-updates -a"
+  },
+  "dependencies": {
+    "@arkecosystem/core-interfaces": "^2.1.0"    
   },
   "devDependencies": {
-    "depcheck": "^0.6.9",
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "jest": "^23.1.0",
-    "jest-extended": "^0.7.2",
-    "jsdoc": "^3.5.5",
+    "@sindresorhus/tsconfig": "^0.1.1",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.17",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2",
+    "typedoc": "^0.13.0",
+    "ts-jest": "^23.10.5",
+    "jest": "^23.6.0",
+    "jest-extended": "^0.11.0",
     "regenerator-runtime": "^0.11.1",
-    "standard": "^11.0.1"
+    "npm-check-updates": "^2.15.0",
+    "cross-env": "^5.2.0",
+    "del-cli": "^1.1.0"
+  },
+  "jest": {
+    "preset": "../../jest-preset.json"
   }
 }
