@@ -28,23 +28,23 @@
     "updates": "../../node_modules/npm-check-updates/bin/npm-check-updates -a"
   },
   "dependencies": {
-    "@arkecosystem/core-interfaces": "^2.1.0"
+    "@arkecosystem/core-interfaces": "^2.5.7"
   },
   "devDependencies": {
-    "@sindresorhus/tsconfig": "^0.1.1",
-    "@types/jest": "^23.3.10",
-    "@types/node": "^10.12.17",
+    "@sindresorhus/tsconfig": "^0.4.0",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.4",
     "typedoc": "^0.13.0",
-    "ts-jest": "^23.10.5",
-    "jest": "^23.6.0",
-    "jest-extended": "^0.11.0",
+    "ts-jest": "^24.0.2",
+    "jest": "^24.8.0",
+    "jest-extended": "^0.11.2",
     "regenerator-runtime": "^0.11.1",
     "npm-check-updates": "^3.1.0",
     "cross-env": "^5.2.0",
-    "del-cli": "^1.1.0"
+    "del-cli": "^2.0.0"
   },
   "jest": {
     "preset": "../../jest-preset.json"
