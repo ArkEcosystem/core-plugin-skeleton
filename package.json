@@ -44,7 +44,7 @@
     "regenerator-runtime": "^0.13.0",
     "npm-check-updates": "^3.1.0",
     "cross-env": "^6.0.0",
-    "del-cli": "^2.0.0"
+    "del-cli": "^3.0.0"
   },
   "jest": {
     "preset": "../../jest-preset.json"
