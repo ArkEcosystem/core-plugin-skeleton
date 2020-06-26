@@ -1536,7 +1536,7 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-chalk@^1.1.1, chalk@^1.1.3:
+chalk@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
   dependencies:
@@ -1566,6 +1566,14 @@ chalk@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.0.0.tgz#6e98081ed2d17faab615eb52ac66ec1fe6209e72"
   integrity sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
+chalk@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
+  integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
@@ -2285,11 +2293,6 @@ fast-deep-equal@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz#545145077c501491e33b15ec408c294376e94ae4"
   integrity sha512-8UEa58QDLauDNfpbrX55Q9jrGHThw2ZMdOky5Gl1CDtVeJDPVrG4Jxx1N8jw2gkWaff5UUuX1KJd+9zGe2B+ZA==
-
-fast-diff@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
-  integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
 
 fast-glob@^3.0.3:
   version "3.0.4"
@@ -3856,11 +3859,6 @@ lodash@^4.17.13, lodash@^4.17.15:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-lodash@^4.2.0:
-  version "4.17.14"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
-  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
-
 long@~3:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
@@ -4259,14 +4257,6 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-alias@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/node-alias/-/node-alias-1.0.4.tgz#1f1b916b56b9ea241c0135f97ced6940f556f292"
-  integrity sha1-HxuRa1a56iQcATX5fO1pQPVW8pI=
-  dependencies:
-    chalk "^1.1.1"
-    lodash "^4.2.0"
-
 node-forge@^0.8.5:
   version "0.8.5"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.8.5.tgz#57906f07614dc72762c84cef442f427c0e1b86ee"
@@ -4360,22 +4350,20 @@ npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-6.0.0.tgz#9ea6a4c3b56c9729c7d7b02cad0f721992528438"
-  integrity sha512-nbKfHWXtQ376OeaoLvekheEqg7GMsL+ZMnXWlNdrGGAVcOJ8CNg2IE9g2q6yRMFw2JM5LEa/zF771RPPBTZPPw==
+npm-check-updates@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-7.0.1.tgz#ba85756f4e8c34261d9a0a17b0a951c9c2279b50"
+  integrity sha512-z/i1nhxW1OJ2a8wZtm92PS+4vCZ5Y5d86pLDPJScWf8G3vTYJlxd11UqUymnaZWK2nYPMmgxnneAKnFGODDxjw==
   dependencies:
-    chalk "^4.0.0"
+    chalk "^4.1.0"
     cint "^8.2.1"
     cli-table "^0.3.1"
     commander "^5.1.0"
-    fast-diff "^1.2.0"
     find-up "4.1.0"
     get-stdin "^8.0.0"
     json-parse-helpfulerror "^1.0.3"
     libnpmconfig "^1.2.1"
     lodash "^4.17.15"
-    node-alias "^1.0.4"
     p-map "^4.0.0"
     pacote "^11.1.10"
     progress "^2.0.3"
